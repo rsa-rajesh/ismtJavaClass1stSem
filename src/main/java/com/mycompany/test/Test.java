@@ -15,19 +15,25 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) {
-//        float a;
-//        String b,name,address;
-//        a=5.5f;
-//        b= "Yahoo: ";
 
-                    System.out.println("Rajesh \nAdhikari");
-                    System.out.println("Rajesh \tAdhikari");
-                    System.out.println("Rajesh \"Adhikari");
-                    System.out.println("Rajesh \'Adhikari");
-                    System.out.println("Rajesh \u2122Adhikari");
+        
+Students students =new Students("Rajesh","BNP 15");
+students.printString();
+                    System.out.print("\n \n");
+Students students1 =new Students();
+students1.printString();
+                    System.out.print("\n \n");
+Students students2 =new Students("Adhikari","BNP 16");
+students2.printString();
+
+//                    System.out.println("Rajesh \nAdhikari");
+//                    System.out.println("Rajesh \tAdhikari");
+//                    System.out.println("Rajesh \"Adhikari");
+//                    System.out.println("Rajesh \'Adhikari");
+//                    System.out.println("Rajesh \u2122Adhikari");
                     
                     
-                    arraylistExample();
+//                    arraylistExample();
 
 
 //        Scanner kb = new Scanner(System.in);
