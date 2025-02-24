@@ -18,24 +18,38 @@ public class Test {
 
         
 Students students =new Students("Rajesh","BNP 15");
-students.printString();
-                    System.out.print("\n \n");
+//students.printString();
+//System.out.print("\n \n");
 Students students1 =new Students();
-students1.printString();
-                    System.out.print("\n \n");
+//students1.printString();
+//System.out.print("\n \n");
 Students students2 =new Students("Adhikari","BNP 16");
-students2.printString();
+//students2.printString();
+ArrayList<Students> allStudents = new ArrayList();
+allStudents.add(students);
+allStudents.add(students1);
+allStudents.add(students2);
+
+for (Students s : allStudents) {
+s.printString();
+System.out.print("\n \n");
+    }
+
+allStudents.addAll(allStudents);
+allStudents.remove(1);
+allStudents.remove(students1);
+
+int secondStudentId = allStudents.get(1).stuId;
+String secondStudentName = allStudents.get(1).studentName;
+String secondStudentAddress = allStudents.get(1).studentAddress;
+
 
 //                    System.out.println("Rajesh \nAdhikari");
 //                    System.out.println("Rajesh \tAdhikari");
 //                    System.out.println("Rajesh \"Adhikari");
 //                    System.out.println("Rajesh \'Adhikari");
-//                    System.out.println("Rajesh \u2122Adhikari");
-                    
-                    
+//                    System.out.println("Rajesh \u2122Adhikari");       
 //                    arraylistExample();
-
-
 //        Scanner kb = new Scanner(System.in);
 //        System.out.println("enter a number ");
 //        int number = kb.nextInt();
@@ -44,14 +58,11 @@ students2.printString();
 //        while(count<11){
 //                    System.out.println(number*count);
 //                    count++;
-//
 //        }
         
         
         
 //        String ageGroup = getAgeGroup(number);
-        
-        
 //        switch(ageGroup) {
 //            case "child":
 //System.out.println("you are a child");
@@ -100,13 +111,10 @@ students2.printString();
     private static float addTwoNumbers(float firstNumber, float secondNumber) {
 //                System.out.println(firstNumber + secondNumber);
         return firstNumber + secondNumber;
-
     }
-    
     
      private static void getIntrestAmount(int principleAmount, int years,float intrestRate) {
                 System.out.println((principleAmount*(intrestRate/100))*years);
-
     }
 
     private static String findOddOrEven(int number) {
@@ -161,8 +169,6 @@ System.out.print("contents of al:" + al);
 
 Collections.sort(al, Collections.reverseOrder());
 System.out.print("contents of al:" + al);
-
-
 
 for (String i : al) {
       System.out.println(i);
