@@ -4,8 +4,12 @@
 
 package com.mycompany.test;
 
+import com.mycompany.test.Employee.AgeComparator;
+import com.mycompany.test.Employee.WordComparator;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -16,32 +20,52 @@ public class Test {
 
     public static void main(String[] args) {
 
+        List ts1 = new ArrayList();
+ts1.add(new Employee ("Tom",40000.00,2));
+ts1.add(new Employee ("Harry",20000.00,5));
+ts1.add(new Employee ("Maggie",50000.00,1));
+ts1.add(new Employee ("Chris",70000.00,3));
+Collections.sort(ts1);
+Iterator itr = ts1.iterator();
+while(itr.hasNext()){
+Object element = itr.next();
+System.out.println(element + "\n");
+
+}
+
+Collections.sort(ts1,new WordComparator());
+Iterator itr1 = ts1.iterator();
+while(itr1.hasNext()){
+Object element = itr1.next();
+System.out.println(element + "\n");
+
+}
         
-Students students =new Students("Rajesh","BNP 15");
+//Students students =new Students("Rajesh","BNP 15");
 //students.printString();
 //System.out.print("\n \n");
-Students students1 =new Students();
+//Students students1 =new Students();
 //students1.printString();
 //System.out.print("\n \n");
-Students students2 =new Students("Adhikari","BNP 16");
+//Students students2 =new Students("Adhikari","BNP 16");
 //students2.printString();
-ArrayList<Students> allStudents = new ArrayList();
-allStudents.add(students);
-allStudents.add(students1);
-allStudents.add(students2);
+//ArrayList<Students> allStudents = new ArrayList();
+//allStudents.add(students);
+//allStudents.add(students1);
+//allStudents.add(students2);
 
-for (Students s : allStudents) {
-s.printString();
-System.out.print("\n \n");
-    }
-
-allStudents.addAll(allStudents);
-allStudents.remove(1);
-allStudents.remove(students1);
-
-int secondStudentId = allStudents.get(1).stuId;
-String secondStudentName = allStudents.get(1).studentName;
-String secondStudentAddress = allStudents.get(1).studentAddress;
+//for (Students s : allStudents) {
+//s.printString();
+//System.out.print("\n \n");
+//    }
+//
+//allStudents.addAll(allStudents);
+//allStudents.remove(1);
+//allStudents.remove(students1);
+//
+//int secondStudentId = allStudents.get(1).stuId;
+//String secondStudentName = allStudents.get(1).studentName;
+//String secondStudentAddress = allStudents.get(1).studentAddress;
 
 
 //                    System.out.println("Rajesh \nAdhikari");
