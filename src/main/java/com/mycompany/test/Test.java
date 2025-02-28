@@ -1,11 +1,9 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.mycompany.test;
 
 import com.mycompany.test.Employee.AgeComparator;
-import com.mycompany.test.Employee.WordComparator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -19,28 +17,33 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) {
+//
+//        List ts1 = new ArrayList();
+//ts1.add(new Employee ("Tom",40000.00,2));
+//ts1.add(new Employee ("Harry",20000.00,5));
+//ts1.add(new Employee ("Maggie",50000.00,1));
+//ts1.add(new Employee ("Chris",70000.00,3));
+//Collections.sort(ts1);
+//Iterator itr = ts1.iterator();
+//while(itr.hasNext()){
+//Object element = itr.next();
+//System.out.println(element + "\n");
+//
+//}
+//
+//Collections.sort(ts1,new AgeComparator());
+//Iterator itr1 = ts1.iterator();
+//while(itr1.hasNext()){
+//Object element = itr1.next();
+//System.out.println(element + "\n");
+        FileExample fe = new FileExample();
+        fe.filesAndFoloder();
+        fe.createAndWriteFile("test", "this is test file");
+        fe.readFile("test");
 
-        List ts1 = new ArrayList();
-ts1.add(new Employee ("Tom",40000.00,2));
-ts1.add(new Employee ("Harry",20000.00,5));
-ts1.add(new Employee ("Maggie",50000.00,1));
-ts1.add(new Employee ("Chris",70000.00,3));
-Collections.sort(ts1);
-Iterator itr = ts1.iterator();
-while(itr.hasNext()){
-Object element = itr.next();
-System.out.println(element + "\n");
+    
+//}
 
-}
-
-Collections.sort(ts1,new WordComparator());
-Iterator itr1 = ts1.iterator();
-while(itr1.hasNext()){
-Object element = itr1.next();
-System.out.println(element + "\n");
-
-}
-        
 //Students students =new Students("Rajesh","BNP 15");
 //students.printString();
 //System.out.print("\n \n");
@@ -53,7 +56,6 @@ System.out.println(element + "\n");
 //allStudents.add(students);
 //allStudents.add(students1);
 //allStudents.add(students2);
-
 //for (Students s : allStudents) {
 //s.printString();
 //System.out.print("\n \n");
@@ -66,8 +68,6 @@ System.out.println(element + "\n");
 //int secondStudentId = allStudents.get(1).stuId;
 //String secondStudentName = allStudents.get(1).studentName;
 //String secondStudentAddress = allStudents.get(1).studentAddress;
-
-
 //                    System.out.println("Rajesh \nAdhikari");
 //                    System.out.println("Rajesh \tAdhikari");
 //                    System.out.println("Rajesh \"Adhikari");
@@ -83,9 +83,6 @@ System.out.println(element + "\n");
 //                    System.out.println(number*count);
 //                    count++;
 //        }
-        
-        
-        
 //        String ageGroup = getAgeGroup(number);
 //        switch(ageGroup) {
 //            case "child":
@@ -99,11 +96,6 @@ System.out.println(element + "\n");
 //break;
 //default:
 //System.out.println("you are old");
-
-
-
-
-
 }
         
         
